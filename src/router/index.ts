@@ -3,33 +3,48 @@ import { HelloPage } from '@/pages/hello'
 import { AboutMePage } from '@/pages/about-me'
 import { ContactMePage } from '@/pages/contact-me'
 import { ProjectsPage } from '@/pages/projects'
+import { EditorLayout } from '@/components/layout/editor-layout'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      redirect: '/hello',
-    },
-    {
-      path: '/hello',
       name: 'hello',
       component: HelloPage,
     },
     {
       path: '/about-me',
-      name: 'about-me',
-      component: AboutMePage,
+      component: EditorLayout,
+      children: [
+        {
+          path: '',
+          name: 'about-me',
+          component: AboutMePage,
+        },
+      ],
     },
     {
       path: '/projects',
-      name: 'projects',
-      component: ProjectsPage,
+      component: EditorLayout,
+      children: [
+        {
+          path: '',
+          name: 'projects',
+          component: ProjectsPage,
+        },
+      ],
     },
     {
       path: '/contact-me',
-      name: 'contact-me',
-      component: ContactMePage,
+      component: EditorLayout,
+      children: [
+        {
+          path: '',
+          name: 'contact-me',
+          component: ContactMePage,
+        },
+      ],
     },
   ],
 })

@@ -1,7 +1,172 @@
 <template>
-  <div>Contact Me Page</div>
+  <div class="contact-me-page">
+    <!-- LEFT COLUMN: Form -->
+    <section class="form-column">
+      <form class="contact-form" @submit.prevent="submitForm">
+        <div class="form-group">
+          <label>_name:</label>
+          <input v-model="name" type="text" placeholder="Jonathan Davis" />
+        </div>
+
+        <div class="form-group">
+          <label>_email:</label>
+          <input v-model="email" type="email" placeholder="j.davis@example.com" />
+        </div>
+
+        <div class="form-group">
+          <label>_message</label>
+          <textarea v-model="message" placeholder="your message here..."></textarea>
+        </div>
+
+        <button class="submit-btn" type="submit">submit-message</button>
+      </form>
+    </section>
+
+    <!-- RIGHT COLUMN: Code Snippet -->
+    <section class="code-column">
+      <pre class="code-snippet">
+const button = document.querySelector('#sendBtn');
+
+const msgData = {
+  name: "{{ name || 'Jonathan Davis' }}",
+  email: "{{ email || '' }}",
+  message: "{{ message || '' }}",
+  date: "Thu 21 Apr"
+};
+
+button.addEventListener('click', () => {
+  form.send(msgData);
+});
+      </pre>
+    </section>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 
-<style scoped></style>
+export default defineComponent({
+  name: 'ContactMePage',
+  setup() {
+    // Reactive form fields
+    const name = ref('')
+    const email = ref('')
+    const message = ref('')
+
+    function submitForm() {
+      // Example: handle form submission
+      // Could call an API or manipulate data
+      alert(`Sending message from ${name.value}`)
+    }
+
+    return {
+      name,
+      email,
+      message,
+      submitForm,
+    }
+  },
+})
+</script>
+
+<style scoped>
+/* Overall container: two columns (form on the left, code on the right) */
+.contact-me-page {
+  display: flex;
+  height: 100%; /* Or a set value, e.g., 80vh, as you prefer */
+  background-color: #0e1111;
+  color: #fff;
+}
+
+/* Left column (form) */
+.form-column {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  align-items: center; /* vertically center the form if desired */
+}
+
+/* The form itself */
+.contact-form {
+  width: 100%;
+  max-width: 300px; /* limit form width */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Label + input/textarea groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Label styling */
+.form-group label {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  background-color: #1a1f1f;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 0.6rem;
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #62dafc;
+}
+
+/* Textarea sizing */
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical; /* allow vertical resize only if you want */
+}
+
+/* Submit button */
+.submit-btn {
+  align-self: flex-start; /* keep button left-aligned */
+  background-color: #2f3939;
+  color: #ddd;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #62dafc;
+  color: #1a1f1f;
+}
+
+/* Right column (code snippet) */
+.code-column {
+  flex: 1;
+  padding: 2rem;
+  border-left: 1px solid #2a2f2f;
+  overflow: auto; /* scroll if code is long */
+  display: flex;
+  align-items: center;
+}
+
+/* Code snippet styling */
+.code-snippet {
+  margin: 0;
+  color: #cdd3de;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  white-space: pre; /* preserve spacing */
+}
+</style>
