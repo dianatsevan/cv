@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 /*
   Root layout: a row of three sections:
     1. left-panel (activity bar)
@@ -61,7 +61,7 @@
 
 .line-numbers {
   background-color: #1a1f1f;
-  padding: 1rem 0.5rem;
+  padding: utils.rem(16px) utils.rem(8px);
   text-align: right;
   border-right: 1px solid #2a2f2f;
   user-select: none; /* typically line numbers are not selectable */
@@ -69,13 +69,13 @@
 
 .line-numbers span {
   display: block;
-  padding: 0 0.5rem;
+  padding: 0 utils.rem(8px);
   color: #4b5254; /* line number color */
 }
 
 .code-text {
   flex: 1;
-  padding: 1rem;
+  padding: utils.rem(16px);
   overflow: auto;
 }
 

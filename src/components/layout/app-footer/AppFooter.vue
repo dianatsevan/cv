@@ -14,11 +14,11 @@
   </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer {
   background-color: #1a1f1f;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: utils.rem(16px) utils.rem(24px);
   text-align: center;
 }
 
@@ -26,13 +26,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: utils.rem(8px);
 }
 
 .social-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: utils.rem(16px);
   padding: 0;
   margin: 0;
 }

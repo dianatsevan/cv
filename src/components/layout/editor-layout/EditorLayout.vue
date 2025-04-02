@@ -21,7 +21,7 @@
 import { AppSidebar } from '@/components/layout/app-sidebar'
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .projects-editor-layout {
   display: flex;
   flex: 1;
@@ -42,16 +42,16 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0.5rem 1rem;
+  padding: utils.rem(8px) utils.rem(16px);
   background-color: #1f2424;
   border-bottom: 1px solid #2a2f2f;
-  gap: 1rem;
+  gap: utils.rem(16px);
 }
 
 .active-tab {
   background-color: #2f3939;
   color: #62dafc;
-  padding: 0.3rem 0.6rem;
+  padding: utils.rem(4px) utils.rem(8px);
   border-radius: 4px;
 }
 
@@ -64,16 +64,16 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
 /* Where your project cards live */
 .content-container {
   height: 100%;
-  padding: 1.5rem;
+  padding: utils.rem(24px);
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem; /* space between cards */
+  gap: utils.rem(24px); /* space between cards */
   overflow-y: auto; /* scroll if lots of cards */
 }
 
 /* Example project card styling */
 .project-card {
-  width: 300px;
+  width: utils.rem(300px);
   background-color: #1a1f1f;
   border-radius: 8px;
   padding: 1rem;
@@ -90,12 +90,12 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
 /* A small corner label or icon for the technology */
 .tech-icon {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: utils.rem(8px);
+  right: utils.rem(8px);
   background-color: #2f3939;
-  padding: 0.3rem 0.6rem;
+  padding: utils.rem(4px) utils.rem(8px);
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: utils.rem(12px);
   color: #62dafc;
 }
 
@@ -106,15 +106,15 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
 }
 
 .project-card h3 {
-  margin: 0 0 0.5rem;
+  margin: 0 0 utils.rem(8px);
   color: #62dafc;
-  font-size: 1rem;
+  font-size: utils.rem(16px);
 }
 
 .project-card p {
-  margin: 0 0 1rem;
+  margin: 0 0 utils.rem(16px);
   color: #cdd3de;
-  font-size: 0.9rem;
+  font-size: utils.rem(12px);
   line-height: 1.4;
 }
 
@@ -124,7 +124,7 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
   color: #ddd;
   border: none;
   border-radius: 4px;
-  padding: 0.4rem 1rem;
+  padding: utils.rem(8px) utils.rem(16px);
   cursor: pointer;
   transition: background-color 0.2s;
 }

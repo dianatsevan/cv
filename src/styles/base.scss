@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@use '@/styles/utils';
+
+@import 'https://fonts.googleapis.com/css2?family=Fira+Code&display=swap';
 
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
@@ -35,7 +37,7 @@
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
-  --section-gap: 160px;
+  --section-gap: utils.rem(160px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,7 +71,7 @@ body {
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: utils.rem(16px);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

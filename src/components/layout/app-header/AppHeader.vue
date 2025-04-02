@@ -13,10 +13,10 @@
   </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .header {
-  padding: 0 2rem;
-  height: 60px;
+  padding: 0 utils.rem(32px);
+  height: utils.rem(60px);
   display: flex;
   align-items: center;
   background-color: #1a1f1f;
@@ -31,14 +31,14 @@
 }
 
 .brand {
-  font-size: 1.2rem;
+  font-size: utils.rem(18px);
   font-weight: bold;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: utils.rem(24px);
   margin: 0;
   padding: 0;
 }

@@ -69,7 +69,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /* Overall container: two columns (form on the left, code on the right) */
 .contact-me-page {
   display: flex;
@@ -81,7 +81,7 @@ export default defineComponent({
 /* Left column (form) */
 .form-column {
   flex: 1;
-  padding: 2rem;
+  padding: utils.rem(32px);
   display: flex;
   align-items: center; /* vertically center the form if desired */
 }
@@ -89,22 +89,22 @@ export default defineComponent({
 /* The form itself */
 .contact-form {
   width: 100%;
-  max-width: 300px; /* limit form width */
+  max-width: utils.rem(300px); /* limit form width */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: utils.rem(16px);
 }
 
 /* Label + input/textarea groups */
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: utils.rem(8px);
 }
 
 /* Label styling */
 .form-group label {
-  font-size: 0.9rem;
+  font-size: utils.rem(14px);
   color: #ccc;
 }
 
@@ -114,9 +114,9 @@ export default defineComponent({
   background-color: #1a1f1f;
   border: 1px solid #3a3a3a;
   border-radius: 4px;
-  padding: 0.6rem;
+  padding: utils.rem(10px);
   color: #fff;
-  font-size: 0.9rem;
+  font-size: utils.rem(14px);
   font-family: inherit;
   outline: none;
   transition: border-color 0.2s;
@@ -129,7 +129,7 @@ export default defineComponent({
 
 /* Textarea sizing */
 .contact-form textarea {
-  min-height: 100px;
+  min-height: utils.rem(100px);
   resize: vertical; /* allow vertical resize only if you want */
 }
 
@@ -140,9 +140,9 @@ export default defineComponent({
   color: #ddd;
   border: none;
   border-radius: 4px;
-  padding: 0.4rem 1rem;
+  padding: utils.rem(6px) utils.rem(16px);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: utils.rem(14px);
   transition: background-color 0.2s;
 }
 
@@ -154,7 +154,7 @@ export default defineComponent({
 /* Right column (code snippet) */
 .code-column {
   flex: 1;
-  padding: 2rem;
+  padding: utils.rem(32px);
   border-left: 1px solid #2a2f2f;
   overflow: auto; /* scroll if code is long */
   display: flex;
@@ -166,7 +166,7 @@ export default defineComponent({
   margin: 0;
   color: #cdd3de;
   line-height: 1.5;
-  font-size: 0.9rem;
+  font-size: utils.rem(14px);
   white-space: pre; /* preserve spacing */
 }
 </style>

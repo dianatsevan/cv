@@ -51,19 +51,19 @@
   </aside>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .sidebar {
-  width: 220px;
+  width: utils.rem(220px);
   background-color: #1a1f1f;
   border-right: 1px solid #2a2f2f;
-  padding: 1rem;
+  padding: utils.rem(16px);
   overflow-y: auto;
 }
 
 .sidebar-header {
-  margin-bottom: 1rem;
+  margin-bottom: utils.rem(16px);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: utils.rem(16px);
   color: #ddd;
 }
 
@@ -74,14 +74,14 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: utils.rem(8px);
 }
 
 .tech-list label {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: utils.rem(8px);
 }
 
 .tech-list input[type='checkbox'] {

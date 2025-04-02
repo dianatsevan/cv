@@ -27,29 +27,29 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
+<style lang="scss" scoped>
 .content-container {
   display: flex;
   flex-direction: row;
   align-content: flex-start;
   flex-wrap: wrap;
-  gap: 1.5rem; /* space between cards */
-  padding: 1.5rem;
+  gap: utils.rem(24px); /* space between cards */
+  padding: utils.rem(24px);
   overflow-y: auto; /* scroll if lots of cards */
 }
 
 /* Example project card styling */
 .project-card {
-  width: 300px;
+  width: utils.rem(300px);
   background-color: #1a1f1f;
   border-radius: 8px;
-  padding: 1rem;
+  padding: utils.rem(16px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .project-image {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: utils.rem(16px);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -57,12 +57,12 @@
 /* A small corner label or icon for the technology */
 .tech-icon {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: utils.rem(8px);
+  right: utils.rem(8px);
   background-color: #2f3939;
-  padding: 0.3rem 0.6rem;
+  padding: utils.rem(4px) utils.rem(10px);
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: utils.rem(10px);
   color: #62dafc;
 }
 
@@ -73,15 +73,15 @@
 }
 
 .project-card h3 {
-  margin: 0 0 0.5rem;
+  margin: 0 0 utils.rem(8px);
   color: #62dafc;
-  font-size: 1rem;
+  font-size: utils.rem(16px);
 }
 
 .project-card p {
-  margin: 0 0 1rem;
+  margin: 0 0 utils.rem(16px);
   color: #cdd3de;
-  font-size: 0.9rem;
+  font-size: utils.rem(14px);
   line-height: 1.4;
 }
 
@@ -91,7 +91,7 @@
   color: #ddd;
   border: none;
   border-radius: 4px;
-  padding: 0.4rem 1rem;
+  padding: utils.rem(6px) utils.rem(16px);
   cursor: pointer;
   transition: background-color 0.2s;
 }
