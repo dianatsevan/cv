@@ -20,6 +20,8 @@
 <script lang="ts"></script>
 
 <style lang="scss" scoped>
+@use '@/styles/variables/colors';
+
 .hero-section {
   /* Choose spacing that suits your design */
   padding: utils.rem(32px);
@@ -61,7 +63,7 @@
 .hero-subtitle {
   font-size: utils.rem(22px);
   margin: 0;
-  color: #5874ff; /* or your preferred accent color */
+  color: colors.$indigo-500; /* or your preferred accent color */
 }
 
 /* Code snippet block styling */
