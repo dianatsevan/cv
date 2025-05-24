@@ -20,7 +20,7 @@
 <script lang="ts"></script>
 
 <style lang="scss" scoped>
-@use '@/styles/variables/colors';
+@use '@/styles/variables/theme/colors';
 
 .hero-section {
   /* Choose spacing that suits your design */

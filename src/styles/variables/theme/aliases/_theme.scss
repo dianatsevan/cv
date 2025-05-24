@@ -1,0 +1,9 @@
+@use '@/styles/variables/theme/colors';
+
+$backdrop: colors.$slate-950;
+$background: colors.$slate-900;
+$stroke: colors.$slate-700;
+$heading-foreground: colors.$slate-50;
+$foreground: colors.$slate-400;
+$link-foreground: colors.$rose-400;
+$link-hover-foreground: colors.$rose-200;

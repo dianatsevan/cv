@@ -2,7 +2,7 @@
 @use 'sass:map';
 
 @function color($group, $shade) {
-  @return map-get(map-get(base-color-palette.$palette, $group), $shade);
+  @return map.get(map.get(base-color-palette.$palette, $group), $shade);
 }
 
 $slate-50: color(slate, 50);

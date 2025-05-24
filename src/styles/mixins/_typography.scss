@@ -1,0 +1,66 @@
+@use '@/styles/variables/typography/font-size';
+@use '@/styles/variables/typography/line-height';
+@use '@/styles/variables/theme/aliases/theme';
+
+@mixin h1 {
+  color: theme.$heading-foreground;
+  font-size: font-size.$h1;
+  font-weight: 450;
+  line-height: line-height.$h1;
+}
+
+@mixin h2 {
+  color: theme.$heading-foreground;
+  font-size: font-size.$h2;
+  font-weight: 450;
+  line-height: line-height.$h2;
+}
+
+@mixin h3 {
+  color: theme.$heading-foreground;
+  font-size: font-size.$h3;
+  font-weight: 450;
+  line-height: line-height.$h3;
+}
+
+@mixin h4 {
+  color: theme.$heading-foreground;
+  font-size: font-size.$h4;
+  font-weight: 450;
+  line-height: line-height.$h4;
+}
+
+@mixin h5 {
+  color: theme.$heading-foreground;
+  font-size: font-size.$h5;
+  font-weight: 450;
+  line-height: line-height.$h5;
+}
+
+@mixin h6 {
+  color: theme.$heading-foreground;
+  font-size: font-size.$h6;
+  font-weight: 450;
+  line-height: line-height.$h6;
+}
+
+@mixin body-sm {
+  color: theme.$foreground;
+  font-size: font-size.$body-sm;
+  font-weight: 450;
+  line-height: line-height.$body-sm;
+}
+
+@mixin body-md {
+  color: theme.$foreground;
+  font-size: font-size.$body-md;
+  font-weight: 450;
+  line-height: line-height.$body-md;
+}
+
+@mixin body-lg {
+  color: theme.$foreground;
+  font-size: font-size.$body-lg;
+  font-weight: 450;
+  line-height: line-height.$body-lg;
+}
