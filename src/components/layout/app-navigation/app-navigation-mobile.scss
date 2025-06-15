@@ -1,0 +1,34 @@
+@use '@/styles/variables/theme/aliases/theme';
+@use '@/styles/media';
+@use '@/styles/utils';
+
+.mobile-nav {
+  --nav-direction: column;
+  --active-link-state-display: none;
+
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: theme.$background;
+
+  @include media.desktop-up {
+    display: none;
+  }
+}
+
+.caption {
+  padding: utils.rem(24px) utils.rem(24px) utils.rem(12px);
+  border-bottom: 1px solid theme.$stroke;
+}
+
+.nav {
+  display: block;
+}
+
+:deep(.nav-links a) {
+  padding: utils.rem(12px) utils.rem(24px);
+  color: theme.$heading-foreground;
+  border: none;
+  border-bottom: 1px solid theme.$stroke;
+}

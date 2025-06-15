@@ -1,0 +1,24 @@
+@use '@/styles/variables/breakpoints';
+
+// width > 1024px
+@mixin desktop-up {
+  @media (min-width: breakpoints.$xl) {
+    @content;
+  }
+}
+
+// width > 768px
+@mixin tablet-down {
+  @media (min-width: breakpoints.$md) {
+    @content;
+  }
+}
+
+// width > 512px
+@mixin mobile-down {
+  @media (min-width: breakpoints.$sm) {
+    @content;
+  }
+}
+
+// todo: landscape media queries

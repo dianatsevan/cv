@@ -1,0 +1,57 @@
+@use '@/styles/media';
+@use '@/styles/variables/theme/aliases/theme';
+@use '@/styles/variables/theme/colors';
+@use '@/styles/variables/theme/aliases/primary';
+
+.nav {
+  display: none;
+  width: 100%;
+
+  @include media.desktop-up {
+    display: block;
+  }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: var(--nav-direction, row);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__left {
+    display: flex;
+    flex-direction: var(--nav-direction, row);
+    border-right: 1px solid theme.$stroke;
+  }
+}
+
+.nav-links a {
+  position: relative;
+  display: block;
+  padding: utils.rem(16px) utils.rem(32px);
+  border-left: 1px solid theme.$stroke;
+  transition: color 0.2s ease-in-out;
+  color: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    color: colors.$slate-300;
+  }
+
+  &.router-link-exact-active {
+    color: theme.$heading-foreground;
+  }
+
+  &.router-link-exact-active::after {
+    content: '';
+    display: var(--active-link-state-display, block);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px solid primary.$background;
+  }
+}

@@ -1,0 +1,36 @@
+@use '@/styles/variables/theme/aliases/theme';
+@use '@/styles/media';
+
+.header {
+  display: flex;
+  border-bottom: 1px solid theme.$stroke;
+  color: theme.$foreground;
+  justify-content: space-between;
+
+  @include media.desktop-up {
+    align-items: center;
+  }
+}
+
+.brand {
+  display: block;
+  margin-right: 0;
+  padding: utils.rem(16px) utils.rem(24px);
+  white-space: nowrap;
+
+  @include media.desktop-up {
+    margin-right: utils.rem(128px);
+  }
+}
+
+.menu-icon {
+  display: flex;
+  padding: utils.rem(16px);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+
+  @include media.desktop-up {
+    display: none;
+  }
+}

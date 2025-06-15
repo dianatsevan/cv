@@ -1,59 +1,24 @@
 <template>
   <header class="header">
-    <nav class="nav">
-      <div class="brand">diana-tsevan</div>
+    <div class="brand">diana-tsevan</div>
 
-      <ul class="nav-links">
-        <li><router-link to="/">_hello</router-link></li>
-        <li><router-link to="/about-me">_about-me</router-link></li>
-        <li><router-link to="/projects">_projects</router-link></li>
-        <li><router-link to="/contact-me">_contact-me</router-link></li>
-      </ul>
-    </nav>
+    <AppNavigation />
+
+    <button class="menu-icon" @click="toggleNavigation">
+      <MenuIcon v-if="!isNavigationOpen" />
+      <CrossIcon v-else />
+    </button>
   </header>
 </template>
 
-<style lang="scss" scoped>
-.header {
-  padding: 0 utils.rem(32px);
-  height: utils.rem(60px);
-  display: flex;
-  align-items: center;
-  background-color: #1a1f1f;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
+<script setup lang="ts">
+import { AppNavigation } from '@/components/layout/app-navigation';
+import { CrossIcon, MenuIcon } from '@/components/icons';
+import { useNavigation } from '@/composables/use-navigation';
 
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+const { toggleNavigation, isNavigationOpen } = useNavigation();
+</script>
 
-.brand {
-  font-size: utils.rem(18px);
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: utils.rem(24px);
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  display: inline-block;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-.nav-links a:hover {
-  color: #62dafc;
-}
+<style scoped>
+@import './app-header.scss';
 </style>

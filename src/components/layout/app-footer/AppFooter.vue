@@ -4,10 +4,14 @@
       <span>find me in:</span>
       <ul class="social-links">
         <li>
-          <a href="https://twitter.com/username" target="_blank" rel="noopener">Twitter</a>
+          <a href="https://twitter.com/username" target="_blank" rel="noopener"
+            >Twitter</a
+          >
         </li>
         <li>
-          <a href="https://facebook.com/username" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://facebook.com/username" target="_blank" rel="noopener"
+            >Facebook</a
+          >
         </li>
       </ul>
     </div>
@@ -15,11 +19,13 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/styles/variables/theme/aliases/theme';
+
 .footer {
-  background-color: #1a1f1f;
   color: #fff;
   padding: utils.rem(16px) utils.rem(24px);
   text-align: center;
+  border-top: 1px solid theme.$stroke;
 }
 
 .footer-container {
