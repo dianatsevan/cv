@@ -10,5 +10,5 @@ import { AppNavigation } from '@/components/layout/app-navigation';
 </script>
 
 <style scoped lang="scss">
-@import './app-navigation-mobile.scss';
+@use './app-navigation-mobile.scss';
 </style>

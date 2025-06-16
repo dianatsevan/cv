@@ -1,0 +1,50 @@
+@use '@/styles/variables/theme/aliases/theme';
+@use '@/styles/utils';
+@use '@/styles/variables/theme/colors';
+@use '@/styles/media';
+
+.footer {
+  display: flex;
+  color: theme.$foreground;
+  border-top: 1px solid theme.$stroke;
+}
+
+.footer > p {
+  padding: utils.rem(16px) utils.rem(24px);
+  border-right: 1px solid theme.$stroke;
+  white-space: nowrap;
+
+  @include media.mobile-down {
+    flex: 1;
+  }
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: utils.rem(16px);
+  border-right: 1px solid theme.$stroke;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-links a svg {
+  transition: fill 0.2s ease-in-out;
+}
+
+.social-links a:hover svg {
+  fill: colors.$slate-300;
+}

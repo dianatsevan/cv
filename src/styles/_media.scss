@@ -7,16 +7,16 @@
   }
 }
 
-// width > 768px
+// width < 768px
 @mixin tablet-down {
-  @media (min-width: breakpoints.$md) {
+  @media (max-width: breakpoints.$md) {
     @content;
   }
 }
 
-// width > 512px
+// width < 512px
 @mixin mobile-down {
-  @media (min-width: breakpoints.$sm) {
+  @media (max-width: breakpoints.$sm) {
     @content;
   }
 }
