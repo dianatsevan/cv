@@ -4,7 +4,7 @@ import type { TLink } from './types';
 export const links: TLink[] = [
   {
     title: 'linkedin',
-    url: 'https://www.linkedin.com/in/dianatsevan/',
+    url: 'https://linkedin.com/in/dianatsevan/',
     icon: LinkedinIcon,
   },
   {

@@ -1,66 +1,65 @@
-@use '@/styles/variables/typography/font-size';
-@use '@/styles/variables/typography/line-height';
 @use '@/styles/variables/theme/aliases/theme';
+@use '@/styles/utils';
 
 @mixin h1 {
   color: theme.$heading-foreground;
-  font-size: font-size.$h1;
+  font-size: utils.rem(60px);
   font-weight: 450;
-  line-height: line-height.$h1;
+  line-height: utils.rem(66px);
 }
 
 @mixin h2 {
   color: theme.$heading-foreground;
-  font-size: font-size.$h2;
+  font-size: utils.rem(48px);
   font-weight: 450;
-  line-height: line-height.$h2;
+  line-height: utils.rem(57.6px);
 }
 
 @mixin h3 {
   color: theme.$heading-foreground;
-  font-size: font-size.$h3;
+  font-size: utils.rem(36px);
   font-weight: 450;
-  line-height: line-height.$h3;
+  line-height: utils.rem(46.8px);
 }
 
 @mixin h4 {
   color: theme.$heading-foreground;
-  font-size: font-size.$h4;
+  font-size: utils.rem(30px);
   font-weight: 450;
-  line-height: line-height.$h4;
+  line-height: utils.rem(42px);
 }
 
 @mixin h5 {
   color: theme.$heading-foreground;
-  font-size: font-size.$h5;
+  font-size: utils.rem(24px);
   font-weight: 450;
-  line-height: line-height.$h5;
+  line-height: utils.rem(33.6px);
 }
 
 @mixin h6 {
   color: theme.$heading-foreground;
-  font-size: font-size.$h6;
+  font-size: utils.rem(20px);
   font-weight: 450;
-  line-height: line-height.$h6;
+  line-height: utils.rem(30px);
 }
 
 @mixin body-sm {
   color: theme.$foreground;
-  font-size: font-size.$body-sm;
+  font-size: utils.rem(14px);
   font-weight: 450;
-  line-height: line-height.$body-sm;
+  line-height: utils.rem(19.6px);
 }
 
 @mixin body-md {
   color: theme.$foreground;
-  font-size: font-size.$body-md;
+  font-size: utils.rem(16px);
   font-weight: 450;
-  line-height: line-height.$body-md;
+  line-height: utils.rem(24px);
 }
 
 @mixin body-lg {
   color: theme.$foreground;
-  font-size: font-size.$body-lg;
+  font-size: utils.rem(18px);
   font-weight: 450;
-  line-height: line-height.$body-lg;
+  line-height: utils.rem(27px);
 }

@@ -1,0 +1,60 @@
+@use '@/styles/variables/theme/colors';
+@use '@/styles/variables/theme/aliases/theme';
+@use '@/styles/utils';
+@use '@/styles/typography';
+@use '@/styles/media';
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: utils.rem(24px);
+  gap: utils.rem(75px);
+  flex: 1;
+
+  @include media.desktop-up {
+    padding: 15%;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: utils.rem(4px);
+}
+
+.caption {
+  @include typography.body-sm;
+}
+
+.name {
+  @include typography.h2;
+}
+
+.subtitle {
+  @include typography.h6;
+  color: colors.$indigo-500;
+}
+
+.code-snippet {
+  @include typography.body-sm;
+  display: flex;
+  flex-direction: column;
+  gap: utils.rem(8px);
+
+  & .link {
+    color: theme.$heading-foreground;
+  }
+
+  & .var {
+    color: colors.$indigo-500;
+  }
+
+  & .var-title {
+    color: colors.$teal-400;
+  }
+
+  .link-string {
+    color: theme.$link-foreground;
+  }
+}
