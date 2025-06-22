@@ -23,7 +23,6 @@
   &__left {
     display: flex;
     flex-direction: var(--nav-direction, row);
-    border-right: 1px solid theme.$stroke;
   }
 }
 
@@ -31,7 +30,7 @@
   position: relative;
   display: block;
   padding: utils.rem(16px) utils.rem(32px);
-  border-left: 1px solid theme.$stroke;
+  border-right: 1px solid theme.$stroke;
   transition: color 0.2s ease-in-out;
   color: inherit;
   white-space: nowrap;
@@ -54,4 +53,9 @@
     width: 100%;
     border-bottom: 3px solid primary.$background;
   }
+}
+
+.nav-links__right a {
+  border: none;
+  border-left: 1px solid theme.$stroke;
 }

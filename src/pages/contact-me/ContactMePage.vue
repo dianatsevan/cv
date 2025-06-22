@@ -10,12 +10,19 @@
 
         <div class="form-group">
           <label>_email:</label>
-          <input v-model="email" type="email" placeholder="j.davis@example.com" />
+          <input
+            v-model="email"
+            type="email"
+            placeholder="j.davis@example.com"
+          />
         </div>
 
         <div class="form-group">
           <label>_message</label>
-          <textarea v-model="message" placeholder="your message here..."></textarea>
+          <textarea
+            v-model="message"
+            placeholder="your message here..."
+          ></textarea>
         </div>
 
         <button class="submit-btn" type="submit">submit-message</button>
@@ -43,20 +50,20 @@ button.addEventListener('click', () => {
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'ContactMePage',
   setup() {
     // Reactive form fields
-    const name = ref('')
-    const email = ref('')
-    const message = ref('')
+    const name = ref('');
+    const email = ref('');
+    const message = ref('');
 
     function submitForm() {
       // Example: handle form submission
       // Could call an API or manipulate data
-      alert(`Sending message from ${name.value}`)
+      alert(`Sending message from ${name.value}`);
     }
 
     return {
@@ -64,9 +71,9 @@ export default defineComponent({
       email,
       message,
       submitForm,
-    }
+    };
   },
-})
+});
 </script>
 
 <style lang="scss" scoped>
@@ -74,7 +81,6 @@ export default defineComponent({
 .contact-me-page {
   display: flex;
   height: 100%; /* Or a set value, e.g., 80vh, as you prefer */
-  background-color: #0e1111;
   color: #fff;
 }
 
@@ -111,7 +117,6 @@ export default defineComponent({
 /* Inputs */
 .contact-form input,
 .contact-form textarea {
-  background-color: #1a1f1f;
   border: 1px solid #3a3a3a;
   border-radius: 4px;
   padding: utils.rem(10px);
@@ -136,7 +141,6 @@ export default defineComponent({
 /* Submit button */
 .submit-btn {
   align-self: flex-start; /* keep button left-aligned */
-  background-color: #2f3939;
   color: #ddd;
   border: none;
   border-radius: 4px;

@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { AppSidebar } from '@/components/layout/app-sidebar'
+import { AppSidebar } from '@/components/layout/app-sidebar';
 </script>
 
 <style lang="scss" scoped>
@@ -26,7 +26,6 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
   display: flex;
   flex: 1;
   height: 100%;
-  background-color: #0e1111; /* Inherit or match your dark theme */
   color: #fff; /* Adjust text color as needed */
 }
 
@@ -43,13 +42,11 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
   align-items: center;
   justify-content: flex-start;
   padding: utils.rem(8px) utils.rem(16px);
-  background-color: #1f2424;
   border-bottom: 1px solid #2a2f2f;
   gap: utils.rem(16px);
 }
 
 .active-tab {
-  background-color: #2f3939;
   color: #62dafc;
   padding: utils.rem(4px) utils.rem(8px);
   border-radius: 4px;
@@ -74,7 +71,6 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
 /* Example project card styling */
 .project-card {
   width: utils.rem(300px);
-  background-color: #1a1f1f;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -92,7 +88,6 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
   position: absolute;
   top: utils.rem(8px);
   right: utils.rem(8px);
-  background-color: #2f3939;
   padding: utils.rem(4px) utils.rem(8px);
   border-radius: 4px;
   font-size: utils.rem(12px);
@@ -120,7 +115,6 @@ import { AppSidebar } from '@/components/layout/app-sidebar'
 
 /* “view-project” button */
 .view-project-btn {
-  background-color: #2f3939;
   color: #ddd;
   border: none;
   border-radius: 4px;

@@ -1,0 +1,30 @@
+@use '@/styles/variables/defaults';
+@use '@/styles/utils';
+@use '@/styles/variables/theme/aliases/theme';
+@use '@/styles/variables/theme/colors';
+
+.sidebar {
+  min-width: utils.rem(defaults.$sidebar-width);
+  border-right: 1px solid theme.$stroke;
+  overflow-y: auto;
+  color: theme.$foreground;
+  fill: theme.$foreground;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    color: colors.$slate-300;
+  }
+
+  &.selected {
+    color: theme.$heading-foreground;
+  }
+}
+
+svg {
+  margin: 0 utils.rem(12px);
+}

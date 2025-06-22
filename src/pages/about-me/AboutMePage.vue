@@ -33,55 +33,5 @@
 </template>
 
 <style lang="scss" scoped>
-/*
-  Root layout: a row of three sections:
-    1. left-panel (activity bar)
-    2. sidebar (file tree)
-    3. editor-area (tabs + code)
-*/
-.about-me-page {
-  display: flex;
-  height: 80vh; /* or whatever fits your design */
-  background-color: #0e1111; /* dark background */
-  color: #cdd3de; /* typical “editor text” color */
-}
-/* ============ EDITOR AREA (Tabs + Code) ============ */
-.editor-area {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Main code editor content below tabs */
-.editor-content {
-  flex: 1;
-  display: flex;
-  overflow: hidden; /* or auto, to scroll if needed */
-}
-
-.line-numbers {
-  background-color: #1a1f1f;
-  padding: utils.rem(16px) utils.rem(8px);
-  text-align: right;
-  border-right: 1px solid #2a2f2f;
-  user-select: none; /* typically line numbers are not selectable */
-}
-
-.line-numbers span {
-  display: block;
-  padding: 0 utils.rem(8px);
-  color: #4b5254; /* line number color */
-}
-
-.code-text {
-  flex: 1;
-  padding: utils.rem(16px);
-  overflow: auto;
-}
-
-.code-text pre {
-  margin: 0;
-  line-height: 1.4;
-  color: #80868b; /* comment-style text color */
-}
+@use './about-me-page.scss';
 </style>

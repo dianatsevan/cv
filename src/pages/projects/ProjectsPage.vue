@@ -41,7 +41,6 @@
 /* Example project card styling */
 .project-card {
   width: utils.rem(300px);
-  background-color: #1a1f1f;
   border-radius: 8px;
   padding: utils.rem(16px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -59,7 +58,6 @@
   position: absolute;
   top: utils.rem(8px);
   right: utils.rem(8px);
-  background-color: #2f3939;
   padding: utils.rem(4px) utils.rem(10px);
   border-radius: 4px;
   font-size: utils.rem(10px);
@@ -87,7 +85,6 @@
 
 /* “view-project” button */
 .view-project-btn {
-  background-color: #2f3939;
   color: #ddd;
   border: none;
   border-radius: 4px;

@@ -17,7 +17,7 @@
         </li>
       </div>
 
-      <li>
+      <li class="nav-links__right">
         <router-link to="/contact-me" @click="toggleNavigation"
           >_contact-me</router-link
         >

@@ -1,7 +1,7 @@
 import { LinkedinIcon, TelegramIcon, GithubIcon } from '@/components/icons';
-import type { TLink } from './types';
+import type { ILink } from './types';
 
-export const links: TLink[] = [
+export const links: ILink[] = [
   {
     title: 'linkedin',
     url: 'https://linkedin.com/in/dianatsevan/',
