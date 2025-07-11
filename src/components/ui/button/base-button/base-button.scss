@@ -1,0 +1,107 @@
+@use 'sass:map';
+@use 'sass:color';
+
+@use '@/styles/variables/theme/aliases/theme';
+@use '@/styles/variables/theme/colors';
+@use '@/styles/typography';
+@use '@/styles/utils';
+
+$color-variants: (
+  primary: theme.$primary,
+  success: theme.$success,
+  error: theme.$error,
+  warning: theme.$warning,
+  default: theme.$default,
+);
+
+.base {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: utils.rem(10px);
+  padding: utils.rem(10px) utils.rem(12px);
+  border: none;
+  border-radius: utils.rem(8px);
+  @include typography.body-md;
+  user-select: none;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  @each $name, $color in $color-variants {
+    &.#{$name} {
+      --button-bg-color: #{map.get($color, 'bg')};
+      --button-text-color: #{map.get($color, 'text')};
+      --button-bg-color-hover: #{map.get($color, 'bg-hover')};
+      --button-text-color-hover: #{map.get($color, 'text-hover')};
+    }
+  }
+
+  &.filled {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid transparent;
+
+    &:hover:not(:disabled) {
+      background-color: var(--button-bg-color-hover);
+    }
+  }
+
+  &.ghost {
+    background-color: transparent;
+    color: colors.$slate-50;
+    border: 1px solid colors.$slate-50;
+
+    &:hover:not(:disabled) {
+      background-color: colors.$slate-800;
+    }
+  }
+
+  &.link {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    border: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: 10%;
+    text-underline-offset: 14%;
+    text-underline-position: from-font;
+    background-color: transparent;
+    color: colors.$rose-300;
+
+    &:hover:not(:disabled) {
+      color: colors.$rose-300;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: colors.$slate-700;
+    border: 1px solid transparent;
+    color: colors.$slate-500;
+  }
+
+  &.loading {
+    cursor: progress;
+    opacity: 0.8;
+  }
+
+  & .loader {
+    position: absolute;
+    width: utils.rem(20px);
+    height: utils.rem(20px);
+    border: 2px solid rgba(colors.$slate-50, 0.3);
+    border-radius: 50%;
+    border-top-color: currentColor;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

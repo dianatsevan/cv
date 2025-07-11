@@ -1,3 +1,5 @@
+// TODO: rework ai generated code
+
 <template>
   <div class="projects-editor-layout">
     <AppSidebar />

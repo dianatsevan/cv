@@ -1,3 +1,5 @@
+// TODO: rework ai generated code
+
 <template>
   <div class="content-container">
     <!-- Example project cards (replace with dynamic data as needed) -->
@@ -10,7 +12,7 @@
       </div>
       <h3>Project 1 // _ui-animations</h3>
       <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-      <button class="view-project-btn">view-project</button>
+      <FilledButton>view-project</FilledButton>
     </div>
 
     <div class="project-card">
@@ -20,12 +22,14 @@
       </div>
       <h3>Project 2 // _tetris-game</h3>
       <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-      <button class="view-project-btn">view-project</button>
+      <FilledButton>view-project</FilledButton>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { FilledButton } from '@/components/ui/button/filled-button';
+</script>
 
 <style lang="scss" scoped>
 .content-container {

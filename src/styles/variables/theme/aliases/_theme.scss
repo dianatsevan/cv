@@ -7,3 +7,38 @@ $heading-foreground: colors.$slate-50;
 $foreground: colors.$slate-400;
 $link-foreground: colors.$rose-400;
 $link-hover-foreground: colors.$rose-200;
+
+$primary: (
+  bg: colors.$orange-300,
+  text: colors.$slate-950,
+  bg-hover: colors.$orange-200,
+  text-hover: colors.$slate-950,
+);
+
+$error: (
+  bg: colors.$red-500,
+  text: colors.$slate-950,
+  bg-hover: colors.$red-400,
+  text-hover: colors.$slate-950,
+);
+
+$warning: (
+  bg: colors.$yellow-500,
+  text: colors.$slate-950,
+  bg-hover: colors.$yellow-400,
+  text-hover: colors.$slate-950,
+);
+
+$success: (
+  bg: colors.$green-500,
+  text: colors.$slate-950,
+  bg-hover: colors.$green-400,
+  text-hover: colors.$slate-950,
+);
+
+$default: (
+  bg: colors.$slate-600,
+  text: colors.$slate-50,
+  bg-hover: colors.$slate-500,
+  text-hover: colors.$slate-50,
+);

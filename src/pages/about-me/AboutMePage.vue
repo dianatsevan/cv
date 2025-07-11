@@ -1,3 +1,5 @@
+// TODO: rework ai generated code
+
 <template>
   <div class="about-me-page">
     <!-- EDITOR AREA (Tabs + Code) -->

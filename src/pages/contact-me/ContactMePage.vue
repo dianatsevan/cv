@@ -1,3 +1,5 @@
+// TODO: rework ai generated code
+
 <template>
   <div class="contact-me-page">
     <!-- LEFT COLUMN: Form -->
@@ -25,7 +27,13 @@
           ></textarea>
         </div>
 
-        <button class="submit-btn" type="submit">submit-message</button>
+        <FilledButton
+          class="submit-btn"
+          color="primary"
+          :disabled="buttonState"
+          type="submit"
+          >submit-message</FilledButton
+        >
       </form>
     </section>
 
@@ -49,31 +57,20 @@ button.addEventListener('click', () => {
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script setup lang="ts">
+import { computed, ref } from 'vue';
+import { FilledButton } from '@/components/ui/button/filled-button';
 
-export default defineComponent({
-  name: 'ContactMePage',
-  setup() {
-    // Reactive form fields
-    const name = ref('');
-    const email = ref('');
-    const message = ref('');
+const name = ref('wergwerg');
+const email = ref('');
+const message = ref('');
+const buttonState = computed(
+  () => !name.value || !email.value || !message.value,
+);
 
-    function submitForm() {
-      // Example: handle form submission
-      // Could call an API or manipulate data
-      alert(`Sending message from ${name.value}`);
-    }
-
-    return {
-      name,
-      email,
-      message,
-      submitForm,
-    };
-  },
-});
+const submitForm = () => {
+  alert(`Sending message from ${name.value}`);
+};
 </script>
 
 <style lang="scss" scoped>
@@ -120,7 +117,7 @@ export default defineComponent({
   border: 1px solid #3a3a3a;
   border-radius: 4px;
   padding: utils.rem(10px);
-  color: #fff;
+  color: black;
   font-size: utils.rem(14px);
   font-family: inherit;
   outline: none;
@@ -140,19 +137,7 @@ export default defineComponent({
 
 /* Submit button */
 .submit-btn {
-  align-self: flex-start; /* keep button left-aligned */
-  color: #ddd;
-  border: none;
-  border-radius: 4px;
-  padding: utils.rem(6px) utils.rem(16px);
-  cursor: pointer;
-  font-size: utils.rem(14px);
-  transition: background-color 0.2s;
-}
-
-.submit-btn:hover {
-  background-color: #62dafc;
-  color: #1a1f1f;
+  align-self: flex-start;
 }
 
 /* Right column (code snippet) */
